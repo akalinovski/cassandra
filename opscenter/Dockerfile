@@ -29,4 +29,5 @@ RUN chmod 777 /etc/supervisord.conf && \
 # See http://www.datastax.com/documentation/opscenter/4.0/opsc/reference/opscPorts_r.html
 EXPOSE 8888 61620 50031
 USER root 
-CMD start 
+# CMD start 
+CMD ["sh", "/usr/share/opscenter/bin/opscenter"]
