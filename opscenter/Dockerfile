@@ -17,13 +17,13 @@ RUN mkdir -p /var/log/supervisor
 
 ADD src/start.sh /usr/local/bin/start
 
-RUN chmod a+rw /etc/supervisord.conf && \
-    chmod a+rw -R /var/log/supervisor && \
-    chmod a+rw /var/log && \
-    chmod a+rw -R /etc/opscenter && \
-    chmod a+rw -R /var/lib/opscenter && \
-    chmod a+rw -R /usr/share/opscenter/ && \
-    chmod a+rwx /usr/share/opscenter/bin/opscenter
+RUN chmod 777 /etc/supervisord.conf && \
+    chmod 777 -R /var/log/supervisor && \
+    chmod 777 /var/log && \
+    chmod 777 -R /etc/opscenter && \
+    chmod 777 -R /var/lib/opscenter && \
+    chmod 777 -R /usr/share/opscenter/ && \
+    chmod 777 /usr/share/opscenter/bin/opscenter
 
 # See http://www.datastax.com/documentation/opscenter/4.0/opsc/reference/opscPorts_r.html
 EXPOSE 8888 61620 50031
