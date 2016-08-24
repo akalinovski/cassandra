@@ -21,6 +21,7 @@ RUN chmod a+rw /etc/supervisord.conf
 RUN chmod a+rw -R /var/log/supervisor
 RUN chmod a+rw -R /etc/opscenter
 RUN chmod a+rw -R /usr/share/opscenter/
+RUN chmod a+rw /supervisord.log
 
 # See http://www.datastax.com/documentation/opscenter/4.0/opsc/reference/opscPorts_r.html
 EXPOSE 8888 61620 50031
