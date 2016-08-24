@@ -18,8 +18,9 @@ RUN mkdir -p /var/log/supervisor
 ADD src/start.sh /usr/local/bin/start
 
 RUN chmod a+rw /etc/supervisord.conf
-RUN chmod a+rw /var/log/supervisor
-RUN chmod a+rw /etc/opscenter
+RUN chmod a+rw -R /var/log/supervisor
+RUN chmod a+rw -R /etc/opscenter
+RUN chmod a+rw -R /usr/share/opscenter/
 
 # See http://www.datastax.com/documentation/opscenter/4.0/opsc/reference/opscPorts_r.html
 EXPOSE 8888 61620 50031
