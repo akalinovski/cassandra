@@ -23,6 +23,7 @@ RUN chmod 777 /etc/supervisord.conf && \
     chmod 777 -R /etc/opscenter && \
     chmod 777 -R /var/lib/opscenter && \
     chmod 777 -R /usr/share/opscenter/ && \
+    chmod 777 -R /var/log/opscenter && \
     chmod 777 /usr/share/opscenter/bin/opscenter
 
 # See http://www.datastax.com/documentation/opscenter/4.0/opsc/reference/opscPorts_r.html
